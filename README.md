@@ -1,10 +1,9 @@
-cat > README.md << 'EOF'
 # ask CLI tool
 
-A simple Bash command-line tool that sends prompts to an LLM API using curl and jq.
+A lightweight Bash command-line tool that sends prompts to an OpenAI-compatible LLM API using curl and jq.
 
 ## Features
-- Supports command-line arguments
+- Accepts command-line arguments
 - Supports piped input
 - Supports both combined
 - Uses environment variables
@@ -32,7 +31,7 @@ A simple Bash command-line tool that sends prompts to an LLM API using curl and 
 echo "Explain recursion" | ./ask
 
 ### Combined
-echo "Give example" | ./ask "What is recursion?"
+echo "Give a short example too." | ./ask "What is recursion?"
 
 ## Limitations
 - Requires internet connection
@@ -40,16 +39,3 @@ echo "Give example" | ./ask "What is recursion?"
 
 ## License
 MIT License
-EOF# ask CLI tool
-
-A simple Bash CLI tool that sends prompts to an LLM API using curl and jq.
-
-## Usage
-./ask "your prompt"
-echo "text" | ./ask "instruction"
-
-## Requirements
-- curl
-- jq
-- environment variables: ASK_API_URL, ASK_MODEL, ASK_API_KEY
-
